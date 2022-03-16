@@ -504,7 +504,7 @@ resource "aws_autoscaling_group" "idc" {
 
   lifecycle {
     create_before_destroy = true
-    ignore_changes        = [desired_capacity]
+    ignore_changes        = [desired_capacity,target_group_arns]
   }
 }
 
